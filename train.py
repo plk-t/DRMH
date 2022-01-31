@@ -100,7 +100,7 @@ def train():
                     labels = labels.cuda()
                     boxes = boxes.cuda()
 
-                out2, out_class = net(images, boxes)
+                out2, out_class = net(images, boxes.float())
                 optimizer.zero_grad()
                 classify_loss, hash_loss, quanti_loss = Criterion(out2, out_class, labels)
                 loss = args.alpha * classify_loss + args.beta1 * hash_loss + args.beta * quanti_loss
@@ -129,7 +129,7 @@ def train():
                         images = images.cuda()
                         labels = labels.cuda()
                         boxes = boxes.cuda()
-                    out2, out_class = net(images, boxes)
+                    out2, out_class = net(images, boxes.float())
 
                     classify_loss, hash_loss, quanti_loss = Criterion(out2, out_class, labels)
                     loss = args.alpha * classify_loss + args.beta1 * hash_loss + args.beta * quanti_loss
