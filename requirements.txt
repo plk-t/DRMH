@@ -1,0 +1,15 @@
+h5py
+matplotlib
+numpy
+opencv-python
+pandas
+Pillow
+pycocotools
+scikit_learn
+scipy
+six
+torch
+torchaudio
+torchsummary
+torchvision
+tqdm
