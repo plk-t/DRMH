@@ -14,6 +14,7 @@ The official implementation of **Multi-Label Hashing for Dependency Relations am
 
 ## Train
 
+The datasets could be obtained from https://pan.baidu.com/s/10OBhx3FHf_RpK4rK_CACZQ, code:xuu7
 Train on MIRFLICKR-25K, hash bit: 32bit 
 
 Trained model will be saved in 'weight/flickr/'
