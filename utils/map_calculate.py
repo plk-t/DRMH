@@ -104,14 +104,7 @@ def acg_test(database_hash, test_hash, database_labels, test_labels, n):
         DCG = np.sum(DCG)
 
         imatch_sort = np.array(sorted(imatch_all, reverse=True))
-        # imatch_sort = np.array(sorted(imatch_sort[:n]))
         DCG_max = np.sum((2 ** imatch_sort[:n] - 1) / np.log2(np.arange(2, n + 2, 1)))
-        if DCG_max == 0:
-            print(i)
-            print(DCG)
-            print(DCG_max)
-            NDCG_all.append(0)
-        else:
-            NDCG_all.append(DCG / DCG_max)
+        NDCG_all.append(DCG / DCG_max)
 
     return np.mean(np.array(ACG_all)), np.mean(np.array(NDCG_all))
