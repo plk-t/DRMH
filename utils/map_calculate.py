@@ -108,3 +108,4 @@ def acg_test(database_hash, test_hash, database_labels, test_labels, n):
         NDCG_all.append(DCG / DCG_max)
 
     return np.mean(np.array(ACG_all)), np.mean(np.array(NDCG_all))
+
